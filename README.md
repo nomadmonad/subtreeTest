@@ -1,9 +1,9 @@
 subtreeTest
 ===========
 
-git remote add subtree git@github.com:nomadmonad/subtreeOrigin.git
+`git remote add subtree git@github.com:nomadmonad/subtreeOrigin.git`
 
-git subtree add --prefix subtree subtree master --squash
+`git subtree add --prefix subtree subtree master --squash`
 
 この状態でsubtreeOriginを取り込めた
 
@@ -12,13 +12,19 @@ git subtree add --prefix subtree subtree master --squash
 -----------
 
 subTreeでブランチを作成する場合、以下のコマンドを実行する
-git subtree split --prefix subtree/ -b  subtreeSplitBranch
+
+`git subtree split --prefix subtree/ -b  subtreeSplitBranch`
+
 
 変更した内容は、以下のコマンドでリモートのリポジトリにpushできる
-git subtree push --prefix subtree/ subtree  subtreeSplitBranch
+`git subtree push --prefix subtree/ subtree  subtreeSplitBranch`
 
 このコマンドを実行後、リモートのリポジトリには新しくsubtreeSplitBranchが作成される
 マージはsubtreeOriginのリポジトリ側で実施する。
 
+-----------
 
+subtreeOrigin側の更新を取り込むには以下のコマンド。
+
+`git subtree pull --prefix subtree subtree master`
 
